@@ -16,19 +16,18 @@ namespace TM_TDG.WithDataSets.DAL
 
         public bool loginUser(String login, String pass)
         {
-            //try
-            //{
-            //    DataSet ds = ExecuteQuery(GetConnection(false), "SELECT id_user FROM User WHERE username='" + login + "' AND password='" + pass + "'");
-            //    if (ds.Tables[0].Rows.Count != 1)
-            //        return false;
-            //    else
-            //        return true;
-            //}
-            //catch (OleDbException ex)
-            //{
-            //    throw new ApplicationException("Erro BD", ex);
-            //}
-            return true;
+            try
+            {
+                DataSet ds = ExecuteQuery(GetConnection(false), "SELECT id_user FROM [dbo].[User] WHERE username='" + login + "' AND password='" + pass + "'");
+                if (ds.Tables[0].Rows.Count != 1)
+                    return false;
+                else
+                    return true;
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro BD", ex);
+            }
         }
     }
 }

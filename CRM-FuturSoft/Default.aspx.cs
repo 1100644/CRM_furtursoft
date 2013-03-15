@@ -19,26 +19,19 @@ namespace CRM_FuturSoft
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string login = txt_login.Text;
+            string pass = Scripts.Cryptography.GetMd5Hash(txt_pass.Text);
+            
             ServiceUser.UserClient user = new ServiceUser.UserClient();
-            bool f = user.loginUser(txt_login.Text,txt_pass.Text);
-            Label1.Text = (f)?"login e password válidos":"login e password inválidos";
+            bool f = user.loginUser(login,pass);
+           
+           lbl_valido.Text = (f)?"login e password válidos":"login e password inválidos";
+           lbl_valido.ForeColor = (f)?Color.Green:Color.Red;
         }
 
         protected void pass_TextChanged(object sender, EventArgs e)
         {
-            var str=Scripts.Cryptography.GetMd5Hash("teste");
-            Label2.Text = Scripts.Cryptography.GetMd5Hash(txt_pass.Text);
-            if (Scripts.Cryptography.VerifyMd5Hash("teste", Label2.Text))
-            {
-                Label3.Text = "pass corecta";
-                Label3.ForeColor = Color.Green;
-            }
-            else
-            {
-                Label3.Text = "pass errada";
-                Label3.ForeColor = Color.Red;
-            }
-
+            lbl_pass_encriptada.Text = Scripts.Cryptography.GetMd5Hash(txt_pass.Text);
         }
 
       

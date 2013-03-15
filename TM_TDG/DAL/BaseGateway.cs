@@ -20,7 +20,9 @@ namespace TM_TDG.WithDataSets.DAL
 			//
 		}
         //alteradas as connectionStrings
-        private const string _CONNSTR = @"Data Source=NUNO-PC\SQLEXPRESS;Initial Catalog=FuturSoft-CRM;Integrated Security=True";
+        private const string _CONNSTR = @"Provider=SQLNCLI11;Server=NUNO-PC\SQLEXPRESS;Database=FuturSoft-CRM;Trusted_Connection=yes;";
+        
+
 		private string CONNSTR
 		{
 			get 
