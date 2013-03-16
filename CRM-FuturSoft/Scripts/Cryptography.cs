@@ -14,7 +14,7 @@ namespace CRM_FuturSoft.Scripts
             string hash;
             using (MD5 md5Hash = MD5.Create())
             {
-                hash = GetMd5Hash(md5Hash, pass);
+                hash = GetMd5Hash(md5Hash, Inverter(pass));
             }
             return hash;
         }
@@ -23,7 +23,7 @@ namespace CRM_FuturSoft.Scripts
             bool compare;
             using (MD5 md5Hash = MD5.Create())
             {
-               compare = VerifyMd5Hash(md5Hash, pass, hash);
+               compare = VerifyMd5Hash(md5Hash, Inverter(pass), hash);
             }
             return compare;
         }
@@ -65,6 +65,15 @@ namespace CRM_FuturSoft.Scripts
             {
                 return false;
             }
+        }
+
+        static public string Inverter(string Texto)
+        {
+            char[] ArrayChar = Texto.ToCharArray();
+            //inverte array
+            Array.Reverse(ArrayChar);
+
+            return new string(ArrayChar);
         }
 
     }

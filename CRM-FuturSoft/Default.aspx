@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CRM_FuturSoft.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CRM_FuturSoft.Default" MasterPageFile="~/Site.Master" Title="default"%>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
         <div>
             <asp:Label ID="lbl_valido" runat="server" ForeColor="Red"></asp:Label>
         </div>
@@ -22,6 +15,4 @@
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 
         </p>
-    </form>
-    </body>
-</html>
+</asp:Content>

@@ -1,0 +1,136 @@
+﻿
+ul#menu, ul#menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    background-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #5f5f5f;
+    border-radius: 5px;
+}
+
+    /*muda configuracao para os ul dentro do ul que tem id=menu*/
+    ul#menu ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%; /*o topo fica encostado ao ul de cima*/
+        box-shadow: 3.5px 3.5px 5px #000000; /*configura tamanho e cor da sombra da caixa*/
+        background-color: #FFFFFF;
+        border-radius: 6px;/*raio da curva*/
+        border-color: #d4d4d4;
+        padding: 0 10px 10px 10px; /*topo depois Clockwise*/
+    }
+
+    ul#menu li:hover ul {
+        display: block;
+    }
+
+    ul#menu li {
+        position: relative;
+        display: block;
+        white-space: nowrap;/*o texto do menu fica todo na mesma linha*/
+        float: left;/*alinhado a esquerda*/
+    }
+
+        ul#menu li:hover {
+            z-index: 1;
+        }
+
+ul#menu {
+    font-size: 0;
+    z-index: 999;/*ordem da camada(numero superior fica a frente)*/
+    position: relative;
+    display: inline-block;
+    zoom: 1; /*zoom por defeito*/
+    padding: 0;
+    *display: inline; /*ficam em linha*/
+}
+
+    ul#menu li a {
+        display: inline-block;
+    }
+
+    /*margem 0 nos li dentro do ul com id=menu*/
+    ul#menu li {
+        margin: 0;
+    }
+
+    ul#menu a:active, ul#menu a:focus {
+        outline-style: none;
+    }
+
+    ul#menu a {
+        display: block;
+        vertical-align: middle;
+        text-align: left;
+        text-decoration: none;
+        font: bold 14px Trebuchet MS;
+        color: #000000;
+        cursor: pointer; /*troca o ponteiro para uma mao*/
+        padding: 10px;
+        background-color: #c1c1c1;
+        background-image: url("../Images/mainbk.png");
+        background-repeat: repeat;
+        background-position: 0 0;
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        border-color: #C0C0C0;
+    }
+
+    ul#menu ul li {
+        float: none;/*sem alinhamento*/
+        margin: 10px 0 0;
+    }
+
+    ul#menu ul a {
+        text-align: left;
+        padding: 4px;
+        background-color: #FFFFFF;
+        background-image: none;
+        border-width: 0;
+        border-radius: 0px;
+        font: 14px Tahoma;
+        color: #000;
+        text-decoration: none;
+    }
+
+    ul#menu li:hover > a, ul#menu li a.pressed {
+        background-color: #0c97e2;
+        border-color: #C0C0C0;
+        border-style: solid;
+        color: #000000;
+        background-image: url("../Images/mainbk.png");
+        background-position: 0 100px;/*meio da imagem*/
+        text-decoration: none;
+    }
+
+    ul#menu img {
+        border: none;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    ul#menu span {
+        display: block;
+        overflow: visible;
+        background-position: right center;
+        background-repeat: no-repeat;
+        padding-right: 0px;
+    }
+
+    ul#menu ul li:hover > a, ul#menu ul li a.pressed {
+        background-color: #FFFFFF;
+        background-image: none;
+        color: #0978b3;
+        text-decoration: none;
+    }
+
+    ul#menu li.topfirst > a {
+        border-radius: 5px 0 0 5px;
+    }
+
+    ul#menu li.toplast > a {
+         border-radius:0 5px 5px 0;
+    }

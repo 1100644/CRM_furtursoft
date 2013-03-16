@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace CRM_FuturSoft
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,6 +32,7 @@ namespace CRM_FuturSoft
         protected void pass_TextChanged(object sender, EventArgs e)
         {
             lbl_pass_encriptada.Text = Scripts.Cryptography.GetMd5Hash(txt_pass.Text);
+            
         }
 
       
