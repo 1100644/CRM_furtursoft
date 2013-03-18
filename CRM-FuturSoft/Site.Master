@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CRM_FuturSoft.SiteMaster" %>
-
+   <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="act" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -8,20 +8,21 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     <link href="Scripts/menu.css" rel="stylesheet" type="text/css" />
-
+    <link href="Scripts/tabela.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
-    <form runat="server">
-
+    <form id="form1" runat="server">
+        
+     
         <header>
 
             <ul id="menu" class="topmenu">
                 <li class="primeiro"><a href="#" style="height: 20px; line-height: 20px;"><span>
-                    <img src="Images/home.png" alt="" />Item 0</span></a>
+                    <img src="Images/home.png" alt="" />Contacto</span></a>
                     <ul>
-                        <li><a href="#">
-                            <img src="Images/register.png" alt="" />grande menu para testar</a></li>
+                        <li><a href="InserirContactos.aspx">
+                            <img src="Images/register.png" alt="" />Inserir</a></li>
                     </ul>
                 </li>
                 <li class="topmenu"><a href="#" style="height: 20px; line-height: 20px;"><span>Item 1</span></a>
@@ -35,7 +36,9 @@
 
         </header>
         <div id="body">
-            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" >
+
+            </asp:ContentPlaceHolder>
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section>
@@ -44,7 +47,7 @@
 
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - CRM-Futursoft</p>
+                    <p>&copy;  <%: DateTime.Now.Year %>- CRM-Futursoftutursoft</p>
                 </div>
             </div>
         </footer>

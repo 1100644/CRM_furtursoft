@@ -1,0 +1,21 @@
+﻿
+      * { 
+        padding:0; 
+        margin:0 0px 0 0;
+} 
+
+/*Na Table com class tabela muda configuracoes*/
+Table.tabela {
+       
+        box-shadow: 3.5px 3.5px 5px #000000; /*configura tamanho e cor da sombra da caixa*/
+        background-color: #FFFFFF;
+        border-radius:5px;
+}
+
+.tabelaHeader{
+    color:red;
+}
+.botao {
+    box-shadow: 1px 2px 3px #000000; /*configura tamanho e cor da sombra da caixa*/
+    border-radius:5px;
+}
